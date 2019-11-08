@@ -155,6 +155,23 @@ body {
       top: 10rem;
       left: 20%; }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s; }
+  .feature-box:hover {
+    transform: scale(1.05) translateY(-1rem); }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-clip: text;
+    color: transparent; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -203,4 +220,14 @@ body {
 .section-about {
   background-color: #f7f7f7;
   padding: 20rem 0;
-  margin-top: -20vh; }
+  margin-top: -10vh; }
+
+.section-features {
+  margin-top: -10rem;
+  padding: 20rem 1rem;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../../img/nat-4.jpg");
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-7deg); }
+  .section-features > * {
+    transform: skewY(7deg); }

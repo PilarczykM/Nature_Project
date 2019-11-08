@@ -8,14 +8,14 @@
   &__photo {
     position: absolute;
     width: 55%;
-    box-shadow: 0 1.5rem 4rem rgba($color: black, $alpha: 0.4);
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.4);
     border-radius: 2px;
     transition: all 0.3s;
     z-index: 0;
 
     &:hover {
       transform: translateY(-2rem) scale(1.05);
-      box-shadow: 0 2rem 4rem rgba($color: black, $alpha: 0.5);
+      box-shadow: 0 2rem 4rem rgba($color: $color-black, $alpha: 0.5);
       z-index: 1;
     }
 
