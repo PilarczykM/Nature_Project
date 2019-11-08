@@ -1,8 +1,9 @@
-@import "base/base";
 @import "abstracts/variables";
 
-@import "./base/animations";
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
 
-@import "./components/button.scss";
+@import "components/button.scss";
 
-@import "./layout/header.scss";
+@import "layout/header.scss";
