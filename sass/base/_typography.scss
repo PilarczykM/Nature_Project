@@ -22,3 +22,30 @@
     margin-bottom: 4rem;
   }
 }
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text; // Thanks for that linear gradient aplays only for text.
+  color: transparent; // Making color transparent we are able to see linear gradient.
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
