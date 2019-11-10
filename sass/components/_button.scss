@@ -4,6 +4,16 @@
     color: $color-grey-dark;
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
+  //Change for the <button> element
+  border: none;
+  cursor: pointer;
+
+  &,
   &:link,
   &:visited {
     display: inline-block;
