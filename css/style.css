@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 *,
 *::before,
 *::after {
@@ -7,6 +24,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
 
 body {
   font-family: "Lato", sans-serif;
@@ -14,6 +40,9 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 @keyframes moveInLeft {
   0% {
@@ -47,6 +76,10 @@ body {
     font-weight: 700;
     letter-spacing: 4.2rem;
     animation: moveInLeft 1s ease-in; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--main {
+        font-size: 5rem;
+        letter-spacing: 1rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -54,6 +87,10 @@ body {
     letter-spacing: 1.8rem;
     animation: moveInTop 1s ease-in;
     margin-bottom: 4rem; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 1.5rem;
+        letter-spacing: 1rem; } }
 
 .heading-secondary {
   display: inline-block;
@@ -63,6 +100,12 @@ body {
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   background-clip: text;
   color: transparent; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -487,8 +530,14 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
   .row::after {
     content: "";
     display: table;
@@ -497,6 +546,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -516,6 +572,9 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0); }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 0 100%, 100% 95%, 100% 0); } }
   .header__logo-box {
     position: absolute;
     top: 5rem;
@@ -560,15 +619,27 @@ body {
   z-index: 1000;
   cursor: pointer;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__button {
+      top: 2rem;
+      right: 2rem;
+      height: 4rem;
+      width: 4rem; } }
   .navigation__button:hover .navigation__icon::before {
     top: -1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__button:hover .navigation__icon::before {
+        top: -0.9rem; } }
   .navigation__button:hover .navigation__icon::after {
     top: 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__button:hover .navigation__icon::after {
+        top: 0.9rem; } }
 
 .navigation__background {
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 2.5rem;
+  right: 2.5rem;
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
@@ -576,16 +647,28 @@ body {
   z-index: 998;
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
   transition: all 0.8s ease-in; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__background {
+      top: 2.5rem;
+      right: 2.5rem;
+      height: 3rem;
+      width: 3rem; } }
 
 .navigation__icon {
   position: relative;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__icon {
+      margin-top: 2rem; } }
   .navigation__icon, .navigation__icon::after, .navigation__icon::before {
     display: inline-block;
     width: 3rem;
     height: 2px;
     background-color: #777;
     transition: all 0.2s; }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__icon, .navigation__icon::after, .navigation__icon::before {
+        width: 2rem; } }
   .navigation__icon::after, .navigation__icon::before {
     content: "";
     position: absolute;
