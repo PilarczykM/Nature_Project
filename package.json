@@ -10,7 +10,8 @@
     "sass-watch": "node-sass -w sass/main.scss css/style.css",
     "compile": "node-sass --output-style=expanded --source-map=true sass/main.scss css/style.css",
     "prefix": "postcss css/style.css --use=autoprefixer --map=false --output=css/style.css",
-    "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output css/style.min.css css/style.css"
+    "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output css/style.min.css css/style.css",
+    "minify-img": "imagemin img_orig/* --out-dir=img/"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,12 @@
   },
   "homepage": "https://github.com/PilarczykM/Nature_Project#readme",
   "devDependencies": {
-    "node-sass": "^4.13.0",
-    "postcss": "^7.0.14",
-    "postcss-cli": "^6.1.2",
     "autoprefixer": "^9.5.1",
     "browserslist": "^4.5.4",
-    "clean-css-cli": "^4.3.0"
+    "clean-css-cli": "^4.3.0",
+    "imagemin-cli": "^5.0.0",
+    "node-sass": "^4.13.0",
+    "postcss": "^7.0.14",
+    "postcss-cli": "^6.1.2"
   }
 }
