@@ -9,7 +9,7 @@
     "sass-compile": "node-sass sass/main.scss css/style.css",
     "sass-watch": "node-sass -w sass/main.scss css/style.css",
     "compile": "node-sass --output-style=expanded --source-map=true sass/main.scss css/style.css",
-    "prefix": "postcss css/style.css --use=autoprefixer --map=false --output=css/style.css",
+    "prefix": "postcss css/style.css -b 'last 10 versions' --use=autoprefixer --map=false --output=css/style.css",
     "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output css/style.min.css css/style.css"
   },
   "repository": {
