@@ -24,7 +24,7 @@
   "homepage": "https://github.com/PilarczykM/Nature_Project#readme",
   "devDependencies": {
     "autoprefixer": "^9.5.1",
-    "browserslist": "^4.5.4",
+    "browserslist": "^4.16.5",
     "clean-css-cli": "^4.3.0",
     "node-sass": "^4.13.0",
     "postcss": "^7.0.36",
